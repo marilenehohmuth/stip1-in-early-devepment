@@ -1,0 +1,36 @@
+# conda env create -n stip1-env-r --file conda.yml
+# conda env update --name stip1-env-r --file conda.yml --prune
+
+name: r-env
+
+channels:
+  - conda-forge
+  - bioconda
+  - r
+  - nodefaults
+
+dependencies:
+  - conda-forge::r-base=4.0.3
+  - conda-forge::r-dplyr=1.0.10
+  - conda-forge::r-stringr=1.4.1
+  - conda-forge::r-ggplot2=3.3.6
+  - conda-forge::r-rcolorbrewer=1.1_3
+  - conda-forge::r-cowplot=1.1.1
+  - conda-forge::r-pheatmap=1.0.12 
+  - conda-forge::r-ggrepel=0.9.1
+  - conda-forge::r-ggpubr=0.4.0
+  - conda-forge::r-hmisc=4.7_1
+  - conda-forge::r-rjava=1.0_6
+  - conda-forge::r-igraph=1.2.6
+  - conda-forge::r-msigdbr=7.5.1
+  - conda-forge::r-biocmanager=1.30.18
+  - bioconda::bioconductor-deseq2=1.30.1
+  - bioconda::bioconductor-enrichplot=1.10.2
+  - bioconda::bioconductor-edger=3.32.1
+  - bioconda::bioconductor-summarizedexperiment=1.20.0 
+  - bioconda::bioconductor-clusterprofiler=3.18.1
+  - bioconda::bioconductor-gsva=1.38.2
+  - bioconda::bioconductor-org.hs.eg.db=3.12.0
+  - bioconda::bioconductor-org.mm.eg.db=3.12.0
+  - bioconda::bioconductor-geoquery=2.58.0
+  - bioconda::bioconductor-go.db=3.12.1
