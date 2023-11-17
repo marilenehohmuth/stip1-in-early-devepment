@@ -192,18 +192,6 @@ ggplot(
   )
 dev.off()
 
-  stage_refined == "16-cell" ~ "#A6CEE3",
-  stage_refined == "4-cell" ~ "#1F78B4",
-  stage_refined == "8-cell" ~ "#B2DF8A",
-  stage_refined == "2-cell (C57)" ~ "#33A02C",
-  stage_refined == "Early 2-cell" ~ "#FB9A99",
-  stage_refined == "Early blastocyst" ~ "#E31A1C",
-  stage_refined == "Late 2-cell" ~ "#FDBF6F",
-  stage_refined == "Late blastocyst" ~ "#FF7F00",
-  stage_refined == "Intermediate 2-cell" ~ "#CAB2D6", 
-  stage_refined == "Intermediate blastocyst" ~ "#6A3D9A",
-  stage_refined == "Zygote" ~ "#FFFF99"
-
 # Build KNN.
 cellrouter <- buildKNN(
   cellrouter, 
