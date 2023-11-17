@@ -178,8 +178,11 @@ ggplot(
   geom_point() +
   theme_void() +
   scale_color_manual(
-    values = brewer.pal(11, "Paired"),
-    name = "Pre-implantation\nstage"
+    values = c(
+      "#A6CEE3", "#1F78B4", "#B2DF8A", "#33A02C", "#FB9A99", "#E31A1C",
+      "#FDBF6F", "#FF7F00", "#CAB2D6", "#6A3D9A", "#FFFF99"
+    ),
+    name = "Pre-implantation stage"
   ) +
   geom_text_repel(
     data = dim_red_coords_unique,
@@ -188,6 +191,18 @@ ggplot(
     show.legend = FALSE
   )
 dev.off()
+
+  stage_refined == "16-cell" ~ "#A6CEE3",
+  stage_refined == "4-cell" ~ "#1F78B4",
+  stage_refined == "8-cell" ~ "#B2DF8A",
+  stage_refined == "2-cell (C57)" ~ "#33A02C",
+  stage_refined == "Early 2-cell" ~ "#FB9A99",
+  stage_refined == "Early blastocyst" ~ "#E31A1C",
+  stage_refined == "Late 2-cell" ~ "#FDBF6F",
+  stage_refined == "Late blastocyst" ~ "#FF7F00",
+  stage_refined == "Intermediate 2-cell" ~ "#CAB2D6", 
+  stage_refined == "Intermediate blastocyst" ~ "#6A3D9A",
+  stage_refined == "Zygote" ~ "#FFFF99"
 
 # Build KNN.
 cellrouter <- buildKNN(
