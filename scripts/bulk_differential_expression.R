@@ -1,5 +1,5 @@
-# ANALYSIS OF IN-HOUSE RNA-SEQ DATA ###########################################
-# @ This script generates some of the plots present in the second main figure # 
+# ANALYSIS OF IN-HOUSE BULK RNA-SEQ DATA ######################################
+# @ This script generates plots present in the second and fourth main figures # 
 # @ of the manuscript + supplemental material.                                #
 ###############################################################################
 
