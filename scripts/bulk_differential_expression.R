@@ -2,7 +2,10 @@
 # @ This script generates plots present in the second and fourth main figures # 
 # @ of the manuscript + supplemental material.                                #
 ###############################################################################
-
+#                                       #
+# Differential gene expression analysis #
+#                                       #
+#########################################
 
 ##########################
 #### Loading packages ####
