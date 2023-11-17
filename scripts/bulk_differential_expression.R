@@ -1,7 +1,7 @@
-# ANALYSIS OF IN-HOUSE RNA-SEQ DATA ##########################################
-# @ This script generates the plots present in the second main figure of the # 
-# @ manuscript + supplemental material.                                      #
-##############################################################################
+# ANALYSIS OF IN-HOUSE RNA-SEQ DATA ###########################################
+# @ This script generates some of the plots present in the second main figure # 
+# @ of the manuscript + supplemental material.                                #
+###############################################################################
 
 
 ##########################
@@ -202,6 +202,7 @@ oe_degs <- find_degs(
      control_condition = "WT"
 )
 
+# FIGURE 2C (MAIN)
 # Make volcano plot.
 pdf(
      paste0(getwd(), "/results/bulk/TGA_vs_WT/DESeq2_volcano_plot.pdf"),
@@ -246,6 +247,7 @@ htko_degs <- find_degs(
      control_condition = "WT"
 )
 
+# FIGURE 2B (MAIN)
 # Make volcano plot.
 pdf(
      paste0(getwd(), "/results/bulk/HTKO_vs_WT/DESeq2_volcano_plot.pdf"),
@@ -290,6 +292,7 @@ oe_degs <- find_degs(
      control_condition = "HTKO"
 )
 
+# FIGURE 2H (MAIN)
 # Make volcano plot.
 pdf(
      paste0(getwd(), "/results/bulk/TGA_vs_HTKO/DESeq2_volcano_plot.pdf"),
@@ -334,6 +337,7 @@ delta_degs <- find_degs(
      control_condition = "WT"
 )
 
+# FIGURE 4C (MAIN)
 # Make volcano plot.
 pdf(
      paste0(getwd(), "/results/bulk/TPR1_vs_WT/DESeq2_volcano_plot.pdf"),
