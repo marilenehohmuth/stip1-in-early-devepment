@@ -242,7 +242,7 @@ tga_dotplot <- make_dotplot(
      title = expression(STIP1^'TgA'~italic('versus')~STIP1^'+/-'),
      terms = tga_terms_to_plot
 )
-pdf(paste0(getwd(), "/results/bulk/TGA_vs_HTKO/TGA_vs_HTKO_ORA_enrichGO_compareCluster_p0.05_selected_terms.pdf"), width = 11.5, height = 5)
+pdf(paste0(getwd(), "/results/bulk/TGA_vs_HTKO/TGA_vs_HTKO_ORA_enrichGO_compareCluster_p0.05_selected_terms.pdf"), width = 9, height = 5)
 tga_dotplot
 dev.off()
 
