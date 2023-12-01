@@ -1,4 +1,5 @@
 data/*
+results/*
 !results/single_cell/*.txt
 !results/single_cell/*.pdf
 !results/single_cell/*.csv
