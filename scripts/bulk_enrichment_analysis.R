@@ -217,8 +217,6 @@ tga_go <- process_degs(
 tga_terms_to_plot <- c(
      "intrinsic apoptotic signaling pathway by p53 class mediator",
      "signal transduction by p53 class mediator",
-     "intrinsic apoptotic signaling pathway in response to DNA damage by p53 class mediator",
-     "DNA damage response, signal transduction by p53 class mediator resulting in cell cycle arrest",
      "positive regulation of apoptotic signaling pathway",
      "regulation of intrinsic apoptotic signaling pathway",
      "Wnt signaling pathway",
