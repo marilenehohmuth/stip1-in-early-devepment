@@ -1,5 +1,5 @@
 # conda env create -n stip1-env-r --file conda.yml
-# conda env update --name stip1-env-r --file conda.yml --prune
+# conda env update --name stip1-env-r --file conda.yml
 
 name: r-env
 
@@ -24,6 +24,7 @@ dependencies:
   - conda-forge::r-igraph=1.2.6
   - conda-forge::r-msigdbr=7.5.1
   - conda-forge::r-biocmanager=1.30.18
+  - bioconda::r-seurat
   - bioconda::bioconductor-deseq2=1.30.1
   - bioconda::bioconductor-enrichplot=1.10.2
   - bioconda::bioconductor-edger=3.32.1
