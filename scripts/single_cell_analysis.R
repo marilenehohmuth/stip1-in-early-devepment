@@ -3,23 +3,21 @@
 # @ manuscript + supplemental material.                                     #
 #############################################################################
 
-
 ##########################
 #### Loading packages ####
 ##########################
 
-library(GEOquery) # v2.58.0
-library(fusca) # v1.2.1
-library(ggplot2) # v3.3.6
-library(dplyr) # v1.0.10 
+library(GEOquery) # v2.68.0
+library(fusca) # v1.3.1
+library(ggplot2) # v3.4.4
+library(dplyr) # v1.1.4
 library(RColorBrewer) # v1.1_3
-library(stringr) # v1.4.1
-library(ggrepel) # v0.9.1
-library(ggpubr) # v0.4.0
-library(clusterProfiler) # v3.18.1
-library(org.Mm.eg.db) # v3.12.0
-library(Seurat) # v4.1.1
-
+library(stringr) # v1.5.1
+library(ggrepel) # v0.9.4
+library(ggpubr) # v0.6.0
+library(clusterProfiler) # v4.8.1
+library(org.Mm.eg.db) # v3.17.0
+library(corrplot) # v0.92
 
 ###################################
 #### Downloading data from GEO ####
@@ -73,7 +71,6 @@ for(file in list.files(paste0(getwd(), "/data/GSE45719/files/"))) {
   # Add cell to metadata table.
   metadata <- rbind(metadata, cell_info)
 }
-
 
 #########################
 #### Processing data ####
@@ -202,21 +199,15 @@ cellrouter <- buildKNN(
 )
 
 # Plot KNN.
-pdf(
-  paste0(getwd(), '/results/single_cell/KNN.pdf'),
-  width = 5.5,
-  height = 4
-)
 plotKNN(
   cellrouter, 
   reduction.type = 'pca', 
   column.ann = 'stage_refined', 
-  column.color = 'stage_refined_color'
-  #width = 4.5, 
-  #height = 3.5, 
-  #filename = paste0(getwd(), '/results/single_cell/KNN.pdf')
+  column.color = 'stage_refined_color',
+  width = 5, 
+  height = 3.5, 
+  filename = paste0(getwd(), '/results/single_cell/KNN.pdf')
 )
-dev.off()
 
 write.table(
   cellrouter@graph$edges, 
@@ -230,13 +221,13 @@ write.table(
 plotDRExpression(
   cellrouter,
   genelist = c("Stip1", "Sox2", "Pou5f1", "Nanog", "Stat3", "Klf4", "Smad1", "Zfp42", "Nr0b1", "Esrrb"),
-  #width = 8,
+  width = 8,
   title = "",
-  #height = 4,
+  height = 4,
   columns = 5,
   dotsize = 1,
-  reduction.type = "pca"
-  #filename = paste0(getwd(), '/results/single_cell/PCA_Stip1_and_Pluripotency_genes.pdf')
+  reduction.type = "pca",
+  filename = paste0(getwd(), '/results/single_cell/PCA_Stip1_and_Pluripotency_genes.pdf')
 )
 
 transposed_norm_counts <- t(cellrouter@assays$RNA@ndata) %>% as.data.frame
@@ -273,10 +264,9 @@ ggplot(
     label = "p.signif", 
     method = "wilcox.test", 
     ref.group = ".all.",
-    size = 1,
+    size = 2,
   )
 dev.off()
-
 
 #############################################
 #### Performing cell trajectory analysis ####
@@ -375,10 +365,9 @@ plottrajectories(
   filename = paste0(getwd(), '/results/single_cell/trajectories_Intermediate_blastocyst_to_Late_blastocyst.pdf')
 )
 
-
-#################################################
-#### Correlation between Stip1 and all genes ####
-#################################################
+####################################################################
+#### Correlation between Stip1 and all genes (blastocyst stage) ####
+####################################################################
 
 # Subset blastocyst cells.
 blastocyst_metadata <- metadata[grepl("blastocyst", metadata$stage_refined) == TRUE,]
@@ -453,7 +442,7 @@ ggplot(
   geom_text_repel(
     data = corr[corr$gene2 %in% c("Nanog"),],
     aes(label = gene2),
-    size = 1,
+    size = 2,
     color = "black",
     nudge_x = 6,
     min.segment.length = 0,
@@ -463,7 +452,7 @@ ggplot(
   geom_text_repel(
     data = corr[corr$gene2 %in% c("Stat3", "Zfp42"),],
     aes(label = gene2),
-    size = 1,
+    size = 2,
     color = "black",
     nudge_x = -2,
     min.segment.length = 0,
@@ -473,7 +462,7 @@ ggplot(
   geom_text_repel(
     data = corr[corr$gene2 %in% c("Klf4"),],
     aes(label = gene2),
-    size = 1,
+    size = 2,
     color = "black",
     nudge_x = 4,
     min.segment.length = 0,
@@ -483,7 +472,7 @@ ggplot(
   geom_text_repel(
     data = corr[corr$gene2 %in% c("Esrrb"),],
     aes(label = gene2),
-    size = 1,
+    size = 2,
     color = "black",
     nudge_x = -8,
     min.segment.length = 0,
@@ -493,7 +482,7 @@ ggplot(
   geom_text_repel(
     data = corr[corr$gene2 %in% c("Pou5f1"),],
     aes(label = gene2),
-    size = 1,
+    size = 2,
     color = "black",
     nudge_x = 5,
     min.segment.length = 0,
@@ -503,7 +492,7 @@ ggplot(
   geom_text_repel(
     data = corr[corr$gene2 %in% c("Sox2"),],
     aes(label = gene2),
-    size = 1,
+    size = 2,
     color = "black",
     nudge_x = 5,
     min.segment.length = 0,
@@ -513,7 +502,7 @@ ggplot(
   geom_text_repel(
     data = corr[corr$gene2 %in% c("Smad1", "Nr0b1"),],
     aes(label = gene2),
-    size = 1,
+    size = 2,
     color = "black",
     nudge_x = -3,
     min.segment.length = 0,
@@ -597,6 +586,10 @@ ggplot(
   geom_vline(xintercept = -log10(0.05), linetype = "dashed")
 dev.off()
 
+##################################################################################
+#### Correlation between Stip1 and core pluripotency genes (blastocyst stage) ####
+##################################################################################
+
 # Look specifically at the correlation between Stip1 and the core pluripotency genes.
 stip1_vs_core <- blastocyst_cellrouter@assays$RNA@ndata[c("Stip1", "Nanog", "Pou5f1", "Sox2"),]
 stip1_vs_core <- as.data.frame(t(stip1_vs_core))
@@ -646,3 +639,128 @@ ggscatter(
   font("ylab", face = "italic")
 dev.off()
 
+###################################################################################
+#### Correlation between Stip1 and core pluripotency genes (across all stages) ####
+###################################################################################
+
+stip1_vs_pluripotency_per_stage <- data.frame()
+for(stage in cellrouter@assays$RNA@sampTab$stage_refined %>% unique) {
+
+  # Get normalized counts of Stip1 and core/extended core pluripotency genes.
+  gene_exp <- cellrouter@assays$RNA@ndata[rownames(cellrouter@assays$RNA@ndata) %in% c("Stip1", "Sox2", "Pou5f1", "Nanog", "Stat3", "Klf4", "Smad1", "Zfp42", "Nr0b1", "Esrrb"),]
+  
+  # Keep only cells that belong to a given developmental stage.
+  gene_exp <- gene_exp[,colnames(gene_exp) %in% rownames(cellrouter@assays$RNA@sampTab)[cellrouter@assays$RNA@sampTab$stage_refined == stage]]
+
+  for(gene in rownames(gene_exp)){
+    c <- cor.test(
+      as.numeric(gene_exp[gene,]),
+      as.numeric(gene_exp["Stip1",]),
+      method = "pearson"
+    )
+    stip1_vs_pluripotency_per_stage <- rbind(
+      stip1_vs_pluripotency_per_stage, c(stage, "Stip1", gene, c$estimate, c$p.value)
+    )
+  }
+}
+colnames(stip1_vs_pluripotency_per_stage) <- c("stage_refined", "stip1", "gene2", "corr", "pvalue")
+
+stip1_vs_pluripotency_per_stage$stage_refined <- factor(
+  stip1_vs_pluripotency_per_stage$stage_refined, 
+  levels = c("Zygote", "2-cell (C57)", "Early 2-cell", "Intermediate 2-cell", "Late 2-cell", "4-cell", "8-cell",
+             "16-cell", "Early blastocyst", "Intermediate blastocyst", "Late blastocyst")
+)
+
+stip1_vs_pluripotency_per_stage$significant <- ifelse(stip1_vs_pluripotency_per_stage$pvalue <= 0.05, TRUE, FALSE)
+stip1_vs_pluripotency_per_stage$significant[stip1_vs_pluripotency_per_stage$corr == 1] <- TRUE
+
+pdf(
+  paste0(getwd(), "/results/single_cell/correlation_Stip1_vs_pluripotency_genes_across_stages.pdf"), 
+  width = 12, 
+  height = 4
+)
+ggplot(
+  stip1_vs_pluripotency_per_stage[is.na(stip1_vs_pluripotency_per_stage$pvalue) == FALSE & stip1_vs_pluripotency_per_stage$gene2 != "Stip1",],
+  aes(x = stage_refined, y = as.numeric(corr))
+) +
+  geom_point(shape = 21, aes(color = significant)) +
+  geom_line(aes(group = gene2)) +
+  facet_wrap(~gene2, nrow = 2) +
+  theme_bw() +
+  theme(
+    axis.text.x = element_text(size = 10, angle = 90, vjust = 0.5, hjust = 1),
+    axis.text.y = element_text(size = 10),
+    axis.title = element_text(size = 12),
+    strip.text.x = element_text(size = 12, face = "italic")
+  ) +
+  geom_hline(yintercept = 0, linetype = "dashed") +
+  scale_color_manual(
+    values = c("snow3", "firebrick2"),
+    name = "Significant"
+  ) +
+  xlab("Pre-implantation stage") +
+  ylab("Pearson correlation")
+dev.off()
+
+############################################################################
+#### Correlation between Stip1 and heat shock genes (across all stages) ####
+############################################################################
+
+stip1_vs_heatShock_per_stage <- data.frame()
+for(stage in cellrouter@assays$RNA@sampTab$stage_refined %>% unique) {
+
+  # Get normalized counts of Stip1 and core/extended core pluripotency genes.
+  gene_exp <- cellrouter@assays$RNA@ndata[rownames(cellrouter@assays$RNA@ndata) %in% c("Stip1", "Hspa4l", "Hspa13", "Hspa14", "Hspa9", "Hspa2", "Hspa4", "Hsp90aa1", "Hspa1a", "Hspa1b", "Hsp90ab1", "Hspa5", "Hspa12a", "Hsp90b1", "Hspa8"),]
+  
+  # Keep only cells that belong to a given developmental stage.
+  gene_exp <- gene_exp[,colnames(gene_exp) %in% rownames(cellrouter@assays$RNA@sampTab)[cellrouter@assays$RNA@sampTab$stage_refined == stage]]
+
+  for(gene in rownames(gene_exp)){
+    c <- cor.test(
+      as.numeric(gene_exp[gene,]),
+      as.numeric(gene_exp["Stip1",]),
+      method = "pearson"
+    )
+    stip1_vs_heatShock_per_stage <- rbind(
+      stip1_vs_heatShock_per_stage, c(stage, "Stip1", gene, c$estimate, c$p.value)
+    )
+  }
+}
+colnames(stip1_vs_heatShock_per_stage) <- c("stage_refined", "stip1", "gene2", "corr", "pvalue")
+
+stip1_vs_heatShock_per_stage$stage_refined <- factor(
+  stip1_vs_heatShock_per_stage$stage_refined, 
+  levels = c("Zygote", "2-cell (C57)", "Early 2-cell", "Intermediate 2-cell", "Late 2-cell", "4-cell", "8-cell",
+             "16-cell", "Early blastocyst", "Intermediate blastocyst", "Late blastocyst")
+)
+
+stip1_vs_heatShock_per_stage$significant <- ifelse(stip1_vs_heatShock_per_stage$pvalue <= 0.05, TRUE, FALSE)
+stip1_vs_heatShock_per_stage$significant[stip1_vs_heatShock_per_stage$corr == 1] <- TRUE
+
+pdf(
+  paste0(getwd(), "/results/single_cell/correlation_Stip1_vs_heatShock_genes_across_stages.pdf"), 
+  width = 14, 
+  height = 4
+)
+ggplot(
+  stip1_vs_heatShock_per_stage[is.na(stip1_vs_heatShock_per_stage$pvalue) == FALSE & stip1_vs_heatShock_per_stage$gene2 != "Stip1",],
+  aes(x = stage_refined, y = as.numeric(corr))
+) +
+  geom_point(shape = 21, aes(color = significant)) +
+  geom_line(aes(group = gene2)) +
+  facet_wrap(~gene2, nrow = 2) +
+  theme_bw() +
+  theme(
+    axis.text.x = element_text(size = 10, angle = 90, vjust = 0.5, hjust = 1),
+    axis.text.y = element_text(size = 10),
+    axis.title = element_text(size = 12),
+    strip.text.x = element_text(size = 12, face = "italic")
+  ) +
+  geom_hline(yintercept = 0, linetype = "dashed") +
+  scale_color_manual(
+    values = c("snow3", "firebrick2"),
+    name = "Significant"
+  ) +
+  xlab("Pre-implantation stage") +
+  ylab("Pearson correlation")
+dev.off()
