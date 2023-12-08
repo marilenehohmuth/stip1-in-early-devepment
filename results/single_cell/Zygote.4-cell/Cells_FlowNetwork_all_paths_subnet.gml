@@ -1,4 +1,4 @@
-Creator "igraph version 1.2.6 Wed Nov 15 18:33:51 2023"
+Creator "igraph version 1.2.6 Fri Dec  8 17:15:40 2023"
 Version 1
 graph
 [
@@ -17,7 +17,7 @@ graph
     id 1
     name "GSM1112541_4cell_1-2"
     label "GSM1112541_4cell_1-2"
-    totalFlows 1.17644752907911
+    totalFlows 1.04311419574578
     degree 5
     props "INTER"
   ]
@@ -26,8 +26,8 @@ graph
     id 2
     name "GSM1112542_4cell_1-4"
     label "GSM1112542_4cell_1-4"
-    totalFlows 0.857509157509158
-    degree 4
+    totalFlows 0.990842490842492
+    degree 5
     props "INTER"
   ]
   node
@@ -42,15 +42,6 @@ graph
   node
   [
     id 4
-    name "GSM1112656_late2cell_6-1"
-    label "GSM1112656_late2cell_6-1"
-    totalFlows 0.275862068965518
-    degree 2
-    props "INTER"
-  ]
-  node
-  [
-    id 5
     name "GSM1112545_4cell_2-3"
     label "GSM1112545_4cell_2-3"
     totalFlows 0.837037037037036
@@ -59,11 +50,20 @@ graph
   ]
   node
   [
+    id 5
+    name "GSM1112656_late2cell_6-1"
+    label "GSM1112656_late2cell_6-1"
+    totalFlows 0.275862068965518
+    degree 2
+    props "INTER"
+  ]
+  node
+  [
     id 6
     name "GSM1112663_late2cell_9-2"
     label "GSM1112663_late2cell_9-2"
-    totalFlows 2.86190883190883
-    degree 12
+    totalFlows 3.16960113960114
+    degree 11
     props "INTER"
   ]
   node
@@ -71,17 +71,17 @@ graph
     id 7
     name "GSM1112659_late2cell_7-2"
     label "GSM1112659_late2cell_7-2"
-    totalFlows 2.64729344729345
+    totalFlows 2.28729344729345
     degree 10
     props "INTER"
   ]
   node
   [
     id 8
-    name "GSM1112655_late2cell_5-2"
-    label "GSM1112655_late2cell_5-2"
-    totalFlows 3.12025991655757
-    degree 12
+    name "GSM1112552_4cell_4-3"
+    label "GSM1112552_4cell_4-3"
+    totalFlows 2.08925118573031
+    degree 6
     props "INTER"
   ]
   node
@@ -89,17 +89,17 @@ graph
     id 9
     name "GSM1112551_4cell_4-2"
     label "GSM1112551_4cell_4-2"
-    totalFlows 2.08925118573031
+    totalFlows 2.08965517241379
     degree 6
     props "INTER"
   ]
   node
   [
     id 10
-    name "GSM1112552_4cell_4-3"
-    label "GSM1112552_4cell_4-3"
-    totalFlows 2.08965517241379
-    degree 6
+    name "GSM1112655_late2cell_5-2"
+    label "GSM1112655_late2cell_5-2"
+    totalFlows 3.41433760636814
+    degree 11
     props "INTER"
   ]
   node
@@ -117,7 +117,7 @@ graph
     name "GSM1112562_8cell_2-2"
     label "GSM1112562_8cell_2-2"
     totalFlows 0.318938371569951
-    degree 2
+    degree 3
     props "INTER"
   ]
   node
@@ -206,17 +206,17 @@ graph
     id 22
     name "GSM1112767_zy2"
     label "GSM1112767_zy2"
-    totalFlows 14.3675686812347
+    totalFlows 14.898360470091
     degree 14
     props "SOURCE"
   ]
   node
   [
     id 23
-    name "GSM1112654_late2cell_5-1"
-    label "GSM1112654_late2cell_5-1"
-    totalFlows 2.27111878590623
-    degree 7
+    name "GSM1112658_late2cell_7-1"
+    label "GSM1112658_late2cell_7-1"
+    totalFlows 1.80721530221613
+    degree 6
     props "INTER"
   ]
   node
@@ -224,17 +224,17 @@ graph
     id 24
     name "GSM1112657_late2cell_6-2"
     label "GSM1112657_late2cell_6-2"
-    totalFlows 2.42899174189163
-    degree 10
+    totalFlows 2.07046688014447
+    degree 8
     props "INTER"
   ]
   node
   [
     id 25
-    name "GSM1112658_late2cell_7-1"
-    label "GSM1112658_late2cell_7-1"
-    totalFlows 1.62586025980631
-    degree 8
+    name "GSM1112654_late2cell_5-1"
+    label "GSM1112654_late2cell_5-1"
+    totalFlows 2.7400091989947
+    degree 9
     props "INTER"
   ]
   node
@@ -252,7 +252,7 @@ graph
     name "GSM1112661_late2cell_8-2"
     label "GSM1112661_late2cell_8-2"
     totalFlows 2.44845779220779
-    degree 9
+    degree 8
     props "INTER"
   ]
   node
@@ -261,25 +261,25 @@ graph
     name "GSM1112703_mid2cell_6-2"
     label "GSM1112703_mid2cell_6-2"
     totalFlows 3.14266796314218
-    degree 9
+    degree 10
     props "INTER"
   ]
   node
   [
     id 29
-    name "GSM1112702_mid2cell_6-1"
-    label "GSM1112702_mid2cell_6-1"
-    totalFlows 7.66712710549722
-    degree 21
+    name "GSM1112704_mid2cell_7-1"
+    label "GSM1112704_mid2cell_7-1"
+    totalFlows 6.35725195503421
+    degree 18
     props "INTER"
   ]
   node
   [
     id 30
-    name "GSM1112704_mid2cell_7-1"
-    label "GSM1112704_mid2cell_7-1"
-    totalFlows 6.35725195503421
-    degree 18
+    name "GSM1112702_mid2cell_6-1"
+    label "GSM1112702_mid2cell_6-1"
+    totalFlows 7.66712710549722
+    degree 21
     props "INTER"
   ]
   node
@@ -306,14 +306,14 @@ graph
     name "GSM1112699_mid2cell_4-2"
     label "GSM1112699_mid2cell_4-2"
     totalFlows 1.36545462983842
-    degree 7
+    degree 5
     props "INTER"
   ]
   node
   [
     id 34
-    name "GSM1112608_early2cell_2-2"
-    label "GSM1112608_early2cell_2-2"
+    name "GSM1112610_early2cell_3-2"
+    label "GSM1112610_early2cell_3-2"
     totalFlows 0.847507331378298
     degree 3
     props "INTER"
@@ -321,8 +321,8 @@ graph
   node
   [
     id 35
-    name "GSM1112610_early2cell_3-2"
-    label "GSM1112610_early2cell_3-2"
+    name "GSM1112608_early2cell_2-2"
+    label "GSM1112608_early2cell_2-2"
     totalFlows 0.847507331378298
     degree 3
     props "INTER"
@@ -332,31 +332,22 @@ graph
     id 36
     name "GSM1112609_early2cell_3-1"
     label "GSM1112609_early2cell_3-1"
-    totalFlows 0.847507331378298
+    totalFlows 1.3782991202346
     degree 3
     props "INTER"
   ]
   node
   [
     id 37
-    name "GSM1112766_zy1"
-    label "GSM1112766_zy1"
-    totalFlows 1.39393939393939
-    degree 3
-    props "INTER"
-  ]
-  node
-  [
-    id 38
-    name "GSM1112605_early2cell_1-1"
-    label "GSM1112605_early2cell_1-1"
+    name "GSM1112769_zy4"
+    label "GSM1112769_zy4"
     totalFlows 1.24324324324324
     degree 3
     props "INTER"
   ]
   node
   [
-    id 39
+    id 38
     name "GSM1112768_zy3"
     label "GSM1112768_zy3"
     totalFlows 1.24324324324324
@@ -365,10 +356,19 @@ graph
   ]
   node
   [
-    id 40
-    name "GSM1112769_zy4"
-    label "GSM1112769_zy4"
+    id 39
+    name "GSM1112605_early2cell_1-1"
+    label "GSM1112605_early2cell_1-1"
     totalFlows 1.24324324324324
+    degree 3
+    props "INTER"
+  ]
+  node
+  [
+    id 40
+    name "GSM1112766_zy1"
+    label "GSM1112766_zy1"
+    totalFlows 1.39393939393939
     degree 3
     props "INTER"
   ]
@@ -385,13 +385,13 @@ graph
   [
     source 1
     target 0
-    weight 0.231080907396697
+    weight 0.164414240730031
   ]
   edge
   [
     source 2
     target 0
-    weight 0.0716117216117221
+    weight 0.138278388278389
   ]
   edge
   [
@@ -403,13 +403,13 @@ graph
   [
     source 4
     target 0
-    weight 0.137931034482759
+    weight 0.418518518518518
   ]
   edge
   [
     source 5
     target 0
-    weight 0.418518518518518
+    weight 0.137931034482759
   ]
   edge
   [
@@ -427,19 +427,19 @@ graph
   [
     source 8
     target 0
-    weight 0.346153846153846
+    weight 0.799798006658259
   ]
   edge
   [
     source 9
     target 0
-    weight 0.799798006658259
+    weight 0.8
   ]
   edge
   [
     source 10
     target 0
-    weight 0.8
+    weight 0.346153846153846
   ]
   edge
   [
@@ -451,7 +451,7 @@ graph
   [
     source 12
     target 1
-    weight 0.159469185784975
+    weight 0.0928025191183086
   ]
   edge
   [
@@ -461,7 +461,7 @@ graph
   ]
   edge
   [
-    source 8
+    source 10
     target 1
     weight 0.25
   ]
@@ -476,6 +476,12 @@ graph
     source 13
     target 12
     weight 0.159469185784975
+  ]
+  edge
+  [
+    source 12
+    target 2
+    weight 0.0666666666666667
   ]
   edge
   [
@@ -553,13 +559,13 @@ graph
   [
     source 30
     target 19
-    weight 0.351351351351351
+    weight 0.378378378378378
   ]
   edge
   [
     source 29
     target 19
-    weight 0.378378378378378
+    weight 0.351351351351351
   ]
   edge
   [
@@ -569,27 +575,21 @@ graph
   ]
   edge
   [
-    source 30
-    target 22
-    weight 0.297297297297297
-  ]
-  edge
-  [
-    source 29
-    target 22
-    weight 0.324324324324324
-  ]
-  edge
-  [
     source 22
     target 21
     weight 0.698883231777967
   ]
   edge
   [
-    source 37
+    source 29
     target 22
-    weight 0.696969696969697
+    weight 0.297297297297297
+  ]
+  edge
+  [
+    source 30
+    target 22
+    weight 0.324324324324324
   ]
   edge
   [
@@ -602,6 +602,12 @@ graph
     source 39
     target 22
     weight 0.621621621621621
+  ]
+  edge
+  [
+    source 41
+    target 22
+    weight 0.361111111111111
   ]
   edge
   [
@@ -619,43 +625,19 @@ graph
   [
     source 36
     target 22
-    weight 0.105571847507331
-  ]
-  edge
-  [
-    source 41
-    target 22
-    weight 0.361111111111111
+    weight 0.636363636363636
   ]
   edge
   [
     source 40
     target 22
+    weight 0.696969696969697
+  ]
+  edge
+  [
+    source 37
+    target 22
     weight 0.621621621621621
-  ]
-  edge
-  [
-    source 30
-    target 20
-    weight 0.368421052631579
-  ]
-  edge
-  [
-    source 31
-    target 20
-    weight 0.124861156150899
-  ]
-  edge
-  [
-    source 28
-    target 20
-    weight 0.179487179487179
-  ]
-  edge
-  [
-    source 29
-    target 20
-    weight 0.394736842105263
   ]
   edge
   [
@@ -671,27 +653,81 @@ graph
   ]
   edge
   [
-    source 8
+    source 10
     target 2
     weight 0.25
   ]
   edge
   [
+    source 28
+    target 20
+    weight 0.179487179487179
+  ]
+  edge
+  [
+    source 31
+    target 20
+    weight 0.124861156150899
+  ]
+  edge
+  [
+    source 29
+    target 20
+    weight 0.368421052631579
+  ]
+  edge
+  [
+    source 30
+    target 20
+    weight 0.394736842105263
+  ]
+  edge
+  [
+    source 32
+    target 21
+    weight 0.125
+  ]
+  edge
+  [
+    source 30
+    target 21
+    weight 0.421052631578947
+  ]
+  edge
+  [
+    source 29
+    target 21
+    weight 0.394736842105263
+  ]
+  edge
+  [
+    source 28
+    target 21
+    weight 0.205128205128205
+  ]
+  edge
+  [
+    source 31
+    target 21
+    weight 0.242424242424242
+  ]
+  edge
+  [
     source 23
     target 6
-    weight 0.307692307692308
+    weight 0.30222904380799
   ]
   edge
   [
     source 24
     target 6
-    weight 0.0746203101293967
+    weight 0.138142559195191
   ]
   edge
   [
     source 25
     target 6
-    weight 0.021529747871834
+    weight 0.29613836850679
   ]
   edge
   [
@@ -701,7 +737,7 @@ graph
   ]
   edge
   [
-    source 9
+    source 8
     target 6
     weight 0.32
   ]
@@ -719,13 +755,7 @@ graph
   ]
   edge
   [
-    source 8
-    target 6
-    weight 0.0249752981241244
-  ]
-  edge
-  [
-    source 10
+    source 9
     target 6
     weight 0.32
   ]
@@ -733,37 +763,43 @@ graph
   [
     source 28
     target 23
-    weight 0.502002100572295
-  ]
-  edge
-  [
-    source 29
-    target 23
-    weight 0.382352941176471
+    weight 0.349537538214421
   ]
   edge
   [
     source 23
     target 7
-    weight 0.230881747408601
+    weight 0.0473084944064308
   ]
   edge
   [
     source 23
     target 3
-    weight 0.220916961783832
+    weight 0.331847890671421
   ]
   edge
   [
-    source 27
+    source 29
     target 23
-    weight 0.233333333333333
+    weight 0.393939393939394
   ]
   edge
   [
     source 30
     target 23
-    weight 0.393939393939394
+    weight 0.382352941176471
+  ]
+  edge
+  [
+    source 28
+    target 24
+    weight 0.179487179487179
+  ]
+  edge
+  [
+    source 28
+    target 25
+    weight 0.367285398575141
   ]
   edge
   [
@@ -774,24 +810,12 @@ graph
   edge
   [
     source 28
-    target 24
-    weight 0.382818121336211
-  ]
-  edge
-  [
-    source 28
-    target 21
-    weight 0.205128205128205
-  ]
-  edge
-  [
-    source 28
     target 3
     weight 0.137795810944636
   ]
   edge
   [
-    source 29
+    source 30
     target 28
     weight 0.633333333333333
   ]
@@ -799,19 +823,43 @@ graph
   [
     source 28
     target 26
-    weight 0.576923076923077
+    weight 0.565433182554842
   ]
   edge
   [
-    source 26
-    target 3
-    weight 0.428571428571429
+    source 32
+    target 24
+    weight 0.125
   ]
   edge
   [
-    source 5
+    source 24
+    target 7
+    weight 0.166344620291988
+  ]
+  edge
+  [
+    source 24
+    target 10
+    weight 0.384615384615385
+  ]
+  edge
+  [
+    source 30
+    target 24
+    weight 0.382352941176471
+  ]
+  edge
+  [
+    source 29
+    target 24
+    weight 0.393939393939394
+  ]
+  edge
+  [
+    source 24
     target 3
-    weight 0.233333333333333
+    weight 0.300584801438865
   ]
   edge
   [
@@ -821,21 +869,33 @@ graph
   ]
   edge
   [
-    source 25
-    target 3
-    weight 0.0715554265052491
+    source 32
+    target 30
+    weight 0.3
   ]
   edge
   [
-    source 10
+    source 26
+    target 3
+    weight 0.428571428571429
+  ]
+  edge
+  [
+    source 8
     target 3
     weight 0.310344827586207
   ]
   edge
   [
-    source 24
+    source 4
     target 3
-    weight 0.444444444444444
+    weight 0.233333333333333
+  ]
+  edge
+  [
+    source 25
+    target 3
+    weight 0.104484140623239
   ]
   edge
   [
@@ -851,20 +911,20 @@ graph
   ]
   edge
   [
-    source 30
+    source 29
     target 26
     weight 0.424242424242424
   ]
   edge
   [
-    source 29
+    source 30
     target 26
     weight 0.411764705882353
   ]
   edge
   [
     source 26
-    target 8
+    target 10
     weight 0.37037037037037
   ]
   edge
@@ -877,60 +937,18 @@ graph
   [
     source 33
     target 26
-    weight 0.0800592417529593
+    weight 0.13089331903855
   ]
   edge
   [
     source 27
     target 26
-    weight 0.0424750866637217
+    weight 0.00313090374636593
   ]
   edge
   [
-    source 30
+    source 29
     target 25
-    weight 0.393939393939394
-  ]
-  edge
-  [
-    source 33
-    target 30
-    weight 0.46034946236559
-  ]
-  edge
-  [
-    source 34
-    target 30
-    weight 0.354838709677419
-  ]
-  edge
-  [
-    source 35
-    target 30
-    weight 0.354838709677419
-  ]
-  edge
-  [
-    source 36
-    target 30
-    weight 0.354838709677419
-  ]
-  edge
-  [
-    source 30
-    target 21
-    weight 0.394736842105263
-  ]
-  edge
-  [
-    source 30
-    target 27
-    weight 0.46875
-  ]
-  edge
-  [
-    source 30
-    target 24
     weight 0.393939393939394
   ]
   edge
@@ -941,189 +959,141 @@ graph
   ]
   edge
   [
-    source 37
-    target 30
-    weight 0.333333333333333
-  ]
-  edge
-  [
-    source 38
-    target 30
-    weight 0.297297297297297
-  ]
-  edge
-  [
-    source 39
-    target 30
-    weight 0.297297297297297
-  ]
-  edge
-  [
-    source 40
-    target 30
-    weight 0.297297297297297
-  ]
-  edge
-  [
     source 33
     target 29
-    weight 0.222377852553618
-  ]
-  edge
-  [
-    source 37
-    target 29
-    weight 0.363636363636364
-  ]
-  edge
-  [
-    source 38
-    target 29
-    weight 0.324324324324324
-  ]
-  edge
-  [
-    source 39
-    target 29
-    weight 0.324324324324324
-  ]
-  edge
-  [
-    source 29
-    target 27
-    weight 0.454545454545455
-  ]
-  edge
-  [
-    source 29
-    target 25
-    weight 0.382352941176471
-  ]
-  edge
-  [
-    source 29
-    target 21
-    weight 0.421052631578947
-  ]
-  edge
-  [
-    source 36
-    target 29
-    weight 0.387096774193548
-  ]
-  edge
-  [
-    source 32
-    target 29
-    weight 0.3
-  ]
-  edge
-  [
-    source 35
-    target 29
-    weight 0.387096774193548
-  ]
-  edge
-  [
-    source 41
-    target 29
-    weight 0.361111111111111
+    weight 0.46034946236559
   ]
   edge
   [
     source 34
     target 29
-    weight 0.387096774193548
+    weight 0.354838709677419
+  ]
+  edge
+  [
+    source 35
+    target 29
+    weight 0.354838709677419
+  ]
+  edge
+  [
+    source 29
+    target 27
+    weight 0.46875
+  ]
+  edge
+  [
+    source 36
+    target 29
+    weight 0.354838709677419
+  ]
+  edge
+  [
+    source 37
+    target 29
+    weight 0.297297297297297
+  ]
+  edge
+  [
+    source 38
+    target 29
+    weight 0.297297297297297
+  ]
+  edge
+  [
+    source 39
+    target 29
+    weight 0.297297297297297
   ]
   edge
   [
     source 40
     target 29
-    weight 0.324324324324324
+    weight 0.333333333333333
   ]
   edge
   [
-    source 29
-    target 24
+    source 30
+    target 27
+    weight 0.454545454545455
+  ]
+  edge
+  [
+    source 30
+    target 25
     weight 0.382352941176471
   ]
   edge
   [
-    source 32
-    target 24
-    weight 0.125
+    source 38
+    target 30
+    weight 0.324324324324324
   ]
   edge
   [
-    source 24
-    target 7
-    weight 0.255486661792623
+    source 39
+    target 30
+    weight 0.324324324324324
   ]
   edge
   [
-    source 24
-    target 8
-    weight 0.0685380831729783
+    source 41
+    target 30
+    weight 0.361111111111111
   ]
   edge
   [
-    source 33
-    target 24
-    weight 0.174635176651304
-  ]
-  edge
-  [
-    source 27
-    target 24
-    weight 0.127156609248805
-  ]
-  edge
-  [
-    source 32
-    target 21
-    weight 0.125
-  ]
-  edge
-  [
-    source 31
-    target 21
-    weight 0.242424242424242
+    source 36
+    target 30
+    weight 0.387096774193548
   ]
   edge
   [
     source 33
-    target 4
-    weight 0.137931034482759
+    target 30
+    weight 0.222377852553618
   ]
   edge
   [
-    source 33
-    target 8
-    weight 0.285714285714286
+    source 40
+    target 30
+    weight 0.363636363636364
   ]
   edge
   [
-    source 33
-    target 25
-    weight 0.00438757631789999
+    source 35
+    target 30
+    weight 0.387096774193548
+  ]
+  edge
+  [
+    source 34
+    target 30
+    weight 0.387096774193548
+  ]
+  edge
+  [
+    source 37
+    target 30
+    weight 0.324324324324324
   ]
   edge
   [
     source 7
-    target 5
+    target 4
     weight 0.185185185185185
+  ]
+  edge
+  [
+    source 25
+    target 7
+    weight 0.107543466498162
   ]
   edge
   [
     source 27
     target 7
     weight 0.296296296296296
-  ]
-  edge
-  [
-    source 25
-    target 7
-    weight 0.194828171995357
   ]
   edge
   [
@@ -1133,7 +1103,7 @@ graph
   ]
   edge
   [
-    source 10
+    source 8
     target 7
     weight 0.269230769230769
   ]
@@ -1145,37 +1115,43 @@ graph
   ]
   edge
   [
-    source 25
-    target 8
-    weight 0.302794561308493
+    source 27
+    target 5
+    weight 0.137931034482759
   ]
   edge
   [
     source 27
     target 25
-    weight 0.254472440691612
+    weight 0.516375531708347
   ]
   edge
   [
     source 27
-    target 8
+    target 10
     weight 0.321428571428571
   ]
   edge
   [
-    source 10
-    target 8
-    weight 0.296296296296296
+    source 25
+    target 10
+    weight 0.305770247800782
+  ]
+  edge
+  [
+    source 33
+    target 25
+    weight 0.266119710166372
   ]
   edge
   [
     source 11
     target 8
-    weight 0.307692307692308
+    weight 0.09358128595878
   ]
   edge
   [
-    source 9
+    source 10
     target 8
     weight 0.296296296296296
   ]
@@ -1183,12 +1159,24 @@ graph
   [
     source 11
     target 9
-    weight 0.0935812859587802
+    weight 0.093783279300521
   ]
   edge
   [
     source 11
     target 10
-    weight 0.0937832793005208
+    weight 0.307692307692308
+  ]
+  edge
+  [
+    source 10
+    target 9
+    weight 0.296296296296296
+  ]
+  edge
+  [
+    source 33
+    target 10
+    weight 0.285714285714286
   ]
 ]

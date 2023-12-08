@@ -1,4 +1,4 @@
-Creator "igraph version 1.2.6 Wed Nov 15 18:33:52 2023"
+Creator "igraph version 1.2.6 Fri Dec  8 17:15:41 2023"
 Version 1
 graph
 [
@@ -60,15 +60,6 @@ graph
   node
   [
     id 6
-    name "GSM1112609_early2cell_3-1"
-    label "GSM1112609_early2cell_3-1"
-    totalFlows 0.919191919191918
-    degree 2
-    props "INTER"
-  ]
-  node
-  [
-    id 7
     name "GSM1112610_early2cell_3-2"
     label "GSM1112610_early2cell_3-2"
     totalFlows 0.919191919191918
@@ -77,9 +68,18 @@ graph
   ]
   node
   [
+    id 7
+    name "GSM1112609_early2cell_3-1"
+    label "GSM1112609_early2cell_3-1"
+    totalFlows 0.919191919191918
+    degree 2
+    props "INTER"
+  ]
+  node
+  [
     id 8
-    name "GSM1112599_C57twocell_20-1"
-    label "GSM1112599_C57twocell_20-1"
+    name "GSM1112596_C57twocell_16-2"
+    label "GSM1112596_C57twocell_16-2"
     totalFlows 1.03703703703704
     degree 2
     props "INTER"
@@ -87,33 +87,6 @@ graph
   node
   [
     id 9
-    name "GSM1112600_C57twocell_20-2"
-    label "GSM1112600_C57twocell_20-2"
-    totalFlows 1.03703703703704
-    degree 2
-    props "INTER"
-  ]
-  node
-  [
-    id 10
-    name "GSM1112597_C57twocell_18-1"
-    label "GSM1112597_C57twocell_18-1"
-    totalFlows 1.03703703703704
-    degree 2
-    props "INTER"
-  ]
-  node
-  [
-    id 11
-    name "GSM1112595_C57twocell_16-1"
-    label "GSM1112595_C57twocell_16-1"
-    totalFlows 1.03703703703704
-    degree 2
-    props "INTER"
-  ]
-  node
-  [
-    id 12
     name "GSM1112598_C57twocell_18-2"
     label "GSM1112598_C57twocell_18-2"
     totalFlows 1.03703703703704
@@ -122,9 +95,36 @@ graph
   ]
   node
   [
+    id 10
+    name "GSM1112599_C57twocell_20-1"
+    label "GSM1112599_C57twocell_20-1"
+    totalFlows 1.03703703703704
+    degree 2
+    props "INTER"
+  ]
+  node
+  [
+    id 11
+    name "GSM1112597_C57twocell_18-1"
+    label "GSM1112597_C57twocell_18-1"
+    totalFlows 1.03703703703704
+    degree 2
+    props "INTER"
+  ]
+  node
+  [
+    id 12
+    name "GSM1112600_C57twocell_20-2"
+    label "GSM1112600_C57twocell_20-2"
+    totalFlows 1.03703703703704
+    degree 2
+    props "INTER"
+  ]
+  node
+  [
     id 13
-    name "GSM1112596_C57twocell_16-2"
-    label "GSM1112596_C57twocell_16-2"
+    name "GSM1112595_C57twocell_16-1"
+    label "GSM1112595_C57twocell_16-1"
     totalFlows 1.03703703703704
     degree 2
     props "INTER"
@@ -222,19 +222,19 @@ graph
   node
   [
     id 24
-    name "GSM1112769_zy4"
-    label "GSM1112769_zy4"
+    name "GSM1112768_zy3"
+    label "GSM1112768_zy3"
     totalFlows 1.98653198653199
-    degree 4
+    degree 5
     props "INTER"
   ]
   node
   [
     id 25
-    name "GSM1112768_zy3"
-    label "GSM1112768_zy3"
+    name "GSM1112769_zy4"
+    label "GSM1112769_zy4"
     totalFlows 1.98653198653199
-    degree 5
+    degree 4
     props "INTER"
   ]
   node
@@ -410,7 +410,7 @@ graph
   ]
   edge
   [
-    source 25
+    source 24
     target 1
     weight 0.097439544807966
   ]
@@ -494,7 +494,7 @@ graph
   ]
   edge
   [
-    source 23
+    source 25
     target 2
     weight 0.909090909090909
   ]
@@ -506,7 +506,7 @@ graph
   ]
   edge
   [
-    source 25
+    source 24
     target 2
     weight 0.909090909090909
   ]
@@ -518,7 +518,7 @@ graph
   ]
   edge
   [
-    source 24
+    source 23
     target 2
     weight 0.909090909090909
   ]
@@ -560,7 +560,7 @@ graph
   ]
   edge
   [
-    source 23
+    source 25
     target 3
     weight 0.124579124579124
   ]
@@ -572,7 +572,7 @@ graph
   ]
   edge
   [
-    source 25
+    source 24
     target 3
     weight 0.227015259646836
   ]
@@ -590,13 +590,13 @@ graph
   ]
   edge
   [
-    source 25
+    source 24
     target 22
     weight 0.0122455322455339
   ]
   edge
   [
-    source 24
+    source 23
     target 22
     weight 0.097384097384096
   ]
@@ -609,13 +609,13 @@ graph
   edge
   [
     source 26
-    target 23
+    target 25
     weight 0.212121212121212
   ]
   edge
   [
     source 26
-    target 24
+    target 23
     weight 0.23931623931624
   ]
 ]

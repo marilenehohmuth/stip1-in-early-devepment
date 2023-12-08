@@ -347,7 +347,7 @@ find_trajectories <- function(
 
 # Find trajectories between the zygote and the late blastocyst stages & plot
 # the expression of Stip1 + core pluripotency genes.
-find_trajectories(
+cellrouter <- find_trajectories(
   cellrouter_ = cellrouter,
   source = 'Zygote',
   targets = setdiff(as.vector(cellrouter@assays$RNA@sampTab$stage_refined), 'Zygote')
@@ -362,17 +362,34 @@ plottrajectories(
   filename = paste0(getwd(), '/results/single_cell/trajectories_Zygote_to_Late_blastocyst.pdf')
 )
 
-# Find trajectories between the early blastocyst and the intermediate blastocyst stages & plot
+# Find trajectories between the early blastocyst and the late blastocyst stages & plot
 # the expression of Stip1 + core + extended core pluripotency genes.
-find_trajectories(
+cellrouter <- find_trajectories(
   cellrouter_ = cellrouter,
   source = 'Early blastocyst',
-  target = setdiff(as.vector(cellrouter@assays$RNA@sampTab$stage_refined), 'Early blastocyst')
+  target = 'Late blastocyst'
+)
+plottrajectories(
+  object = cellrouter,
+  trajectories = paste0('Early blastocyst.Late blastocyst'),
+  geneList = c("Stip1", "Sox2", "Pou5f1", "Nanog", "Stat3", "Klf4", "Smad1", "Zfp42", "Nr0b1", "Esrrb"),
+  rescale = TRUE,
+  width = 5,
+  height = 3,
+  filename = paste0(getwd(), '/results/single_cell/trajectories_Early_blastocyst_to_Late_blastocyst.pdf')
+)
+
+# Find trajectories between the early blastocyst and the intermediate blastocyst stages & plot
+# the expression of Stip1 + core + extended core pluripotency genes.
+cellrouter <- find_trajectories(
+  cellrouter_ = cellrouter,
+  source = 'Early blastocyst',
+  target = 'Intermediate blastocyst'
 )
 plottrajectories(
   object = cellrouter,
   trajectories = paste0('Early blastocyst.Intermediate blastocyst'),
-  geneList = c("Stip1", "Sox2", "Pou5f1", "Nanog", "Stat3", "Klf4", "Smad1", "Zfp42", "Nr0b1", "Esrrb"),
+  geneList = c("Sox2"),
   rescale = TRUE,
   width = 5,
   height = 3,
@@ -395,6 +412,8 @@ plottrajectories(
   height = 3,
   filename = paste0(getwd(), '/results/single_cell/trajectories_Intermediate_blastocyst_to_Late_blastocyst.pdf')
 )
+
+save(cellrouter, file = paste0(getwd(), "/results/single_cell/cellrouter_object.R"))
 
 ####################################################################
 #### Correlation between Stip1 and all genes (blastocyst stage) ####

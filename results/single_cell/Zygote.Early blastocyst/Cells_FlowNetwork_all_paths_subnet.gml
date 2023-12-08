@@ -1,4 +1,4 @@
-Creator "igraph version 1.2.6 Wed Nov 15 18:33:52 2023"
+Creator "igraph version 1.2.6 Fri Dec  8 17:15:41 2023"
 Version 1
 graph
 [
@@ -213,8 +213,8 @@ graph
   node
   [
     id 23
-    name "GSM1112578_8cell_8-4"
-    label "GSM1112578_8cell_8-4"
+    name "GSM1112575_8cell_8-1"
+    label "GSM1112575_8cell_8-1"
     totalFlows 0.133333333333333
     degree 2
     props "INTER"
@@ -222,8 +222,8 @@ graph
   node
   [
     id 24
-    name "GSM1112575_8cell_8-1"
-    label "GSM1112575_8cell_8-1"
+    name "GSM1112578_8cell_8-4"
+    label "GSM1112578_8cell_8-4"
     totalFlows 0.133333333333333
     degree 2
     props "INTER"
@@ -249,15 +249,6 @@ graph
   node
   [
     id 27
-    name "GSM1112552_4cell_4-3"
-    label "GSM1112552_4cell_4-3"
-    totalFlows 0.633874239350913
-    degree 2
-    props "INTER"
-  ]
-  node
-  [
-    id 28
     name "GSM1112551_4cell_4-2"
     label "GSM1112551_4cell_4-2"
     totalFlows 0.633874239350913
@@ -266,9 +257,18 @@ graph
   ]
   node
   [
+    id 28
+    name "GSM1112552_4cell_4-3"
+    label "GSM1112552_4cell_4-3"
+    totalFlows 0.633874239350913
+    degree 2
+    props "INTER"
+  ]
+  node
+  [
     id 29
-    name "GSM1112541_4cell_1-2"
-    label "GSM1112541_4cell_1-2"
+    name "GSM1112542_4cell_1-4"
+    label "GSM1112542_4cell_1-4"
     totalFlows 0.111686515993158
     degree 2
     props "INTER"
@@ -348,18 +348,18 @@ graph
   node
   [
     id 38
-    name "GSM1112539_16cell_6-9"
-    label "GSM1112539_16cell_6-9"
-    totalFlows 0.121212121212121
+    name "GSM1112506_16cell_4-11"
+    label "GSM1112506_16cell_4-11"
+    totalFlows 0.129032258064516
     degree 2
     props "INTER"
   ]
   node
   [
     id 39
-    name "GSM1112506_16cell_4-11"
-    label "GSM1112506_16cell_4-11"
-    totalFlows 0.129032258064516
+    name "GSM1112539_16cell_6-9"
+    label "GSM1112539_16cell_6-9"
+    totalFlows 0.121212121212121
     degree 2
     props "INTER"
   ]
@@ -420,19 +420,19 @@ graph
   node
   [
     id 46
-    name "GSM1112495_16cell_1-15"
-    label "GSM1112495_16cell_1-15"
-    totalFlows 0.121212121212121
-    degree 2
+    name "GSM1112574_8cell_5-8"
+    label "GSM1112574_8cell_5-8"
+    totalFlows 0.250244379276637
+    degree 3
     props "INTER"
   ]
   node
   [
     id 47
-    name "GSM1112574_8cell_5-8"
-    label "GSM1112574_8cell_5-8"
-    totalFlows 0.250244379276637
-    degree 3
+    name "GSM1112495_16cell_1-15"
+    label "GSM1112495_16cell_1-15"
+    totalFlows 0.121212121212121
+    degree 2
     props "INTER"
   ]
   edge
@@ -677,15 +677,15 @@ graph
   ]
   edge
   [
-    source 47
-    target 26
-    weight 0.125122189638319
-  ]
-  edge
-  [
     source 29
     target 26
     weight 0.0558432579965792
+  ]
+  edge
+  [
+    source 46
+    target 26
+    weight 0.125122189638319
   ]
   edge
   [
@@ -763,13 +763,13 @@ graph
   [
     source 38
     target 36
-    weight 0.0606060606060606
+    weight 0.0645161290322581
   ]
   edge
   [
     source 39
     target 36
-    weight 0.0645161290322581
+    weight 0.0606060606060606
   ]
   edge
   [
@@ -827,9 +827,15 @@ graph
   ]
   edge
   [
+    source 16
+    target 14
+    weight 0.0989247311827957
+  ]
+  edge
+  [
     source 46
     target 38
-    weight 0.0606060606060606
+    weight 0.0645161290322581
   ]
   edge
   [
@@ -841,12 +847,6 @@ graph
   [
     source 47
     target 39
-    weight 0.0645161290322581
-  ]
-  edge
-  [
-    source 16
-    target 14
-    weight 0.0989247311827957
+    weight 0.0606060606060606
   ]
 ]
