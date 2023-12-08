@@ -18,6 +18,7 @@ library(ggpubr) # v0.6.0
 library(clusterProfiler) # v4.8.1
 library(org.Mm.eg.db) # v3.17.0
 library(corrplot) # v0.92
+library(cowplot) # v1.1.1
 
 ###################################
 #### Downloading data from GEO ####
@@ -172,7 +173,7 @@ ggplot(
   dim_red_coords,
   aes(x = PC1, y = PC2, color = stage_refined)
 ) +
-  geom_point() +
+  geom_point(alpha = 0.5) +
   theme_void() +
   scale_color_manual(
     values = c(
@@ -218,22 +219,52 @@ write.table(
   quote = FALSE
 )
 
-plotDRExpression(
-  cellrouter,
-  genelist = c("Stip1", "Sox2", "Pou5f1", "Nanog", "Stat3", "Klf4", "Smad1", "Zfp42", "Nr0b1", "Esrrb"),
-  width = 8,
-  title = "",
-  height = 4,
-  columns = 5,
-  dotsize = 1,
-  reduction.type = "pca",
-  filename = paste0(getwd(), '/results/single_cell/PCA_Stip1_and_Pluripotency_genes.pdf')
+# Add gene expression to dataframe containing PCA coordinates.
+genes <- c("Stip1", "Sox2", "Pou5f1", "Nanog", "Stat3", "Klf4", "Smad1", "Zfp42", "Nr0b1", "Esrrb")
+transposed_scaled <- as.matrix(t(cellrouter@assays$RNA@scale.data)) %>% as.data.frame
+
+dim_red_coords_genes <- data.frame()
+for(cell in transposed_norm_counts %>% rownames) {
+  for(gene in genes) {
+    PC1 <- dim_red_coords$PC1[rownames(dim_red_coords) == cell]
+    PC2 <- dim_red_coords$PC2[rownames(dim_red_coords) == cell]
+    gene_exp <- transposed_scaled[,gene][rownames(transposed_scaled) == cell]
+    dim_red_coords_genes <- rbind(dim_red_coords_genes, c(cell, PC1, PC2, gene, gene_exp))
+  }
+}
+colnames(dim_red_coords_genes) <- c("cell", "PC1", "PC2", "gene", "gene_exp")
+
+pdf(
+  paste0(getwd(), '/results/single_cell/PCA_Stip1_and_Pluripotency_genes.pdf'),
+  width = 10,
+  height = 5
 )
+ggplot(
+  dim_red_coords_genes %>% dplyr::arrange(gene_exp),
+  aes(x = as.numeric(PC1), y = as.numeric(PC2), color = as.numeric(gene_exp))
+) +
+  geom_point() +
+  theme_classic() +
+  theme(
+    legend.text = element_text(size = 10),
+    legend.title = element_text(size = 12),
+    strip.text.x = element_text(size = 14, face = "italic")
+  ) +
+  scale_color_gradient2(
+    midpoint = 0,
+    mid = "white",
+    low = "blue",
+    high = "orange",
+    name = "Scaled gene\nexpression\n"
+  ) +
+  facet_wrap(~gene, nrow = 2) +
+  xlab("PC1") +
+  ylab("PC2")
+dev.off()
 
+# Plot Stip1 expression across developmental stages.
 transposed_norm_counts <- t(cellrouter@assays$RNA@ndata) %>% as.data.frame
-
 cellrouter@assays$RNA@sampTab$Stip1 <- transposed_norm_counts$Stip1[match(rownames(cellrouter@assays$RNA@sampTab), rownames(transposed_norm_counts))]
-
 pdf(
   paste0(getwd(), '/results/single_cell/violin_Stip1_across_stages.pdf'),
   width = 6, 
